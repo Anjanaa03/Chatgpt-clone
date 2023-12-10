@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+              <meta charset="UTF-8">
+              <meta name = "viewport" content ="width=device-width, intial-scale=1.0">
+              <meta http-equiv="X-UA-compatible" content="ie=edge">
+              <title>CHATGPTclone</title>
+
+              <link rel="stylesheet" href="style.css">
+
+              <script defer src="script.js"></script>
+
+              <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+       </head>
+
+<body>
+       <div class="app" >
+              <aside>
+                  <nav>
+                    <div class="nav-top">
+                    <button id="add-chat">
+                     <iconify-icon icon="bi:plus"></iconify-icon> New chat
+                    </button>
+                    <ul class= "chats" > 
+                     <li>
+                        <div>
+                            <iconify-icon icon="bi:chat-left" class="icon"></iconify-icon>
+                            <span class="chat-title" contenteditable> New Chat</span> 
+                            </div>
+                            <div>
+                            <iconify-icon icon="bi:trash3" class="icon" onclick="removeChat(this)" ></iconify-icon>
+                            <iconify-icon icon="bi:pen" class="icon" onclick="updateChatTitle(this)"></iconify-icon>
+                        </div>  
+                     </li>
+                    
+                     
+                    </ul>
+              </div>
+                    <ul>
+                     <li id="delete">
+                            <iconify-icon icon="bi:trash3" class="icon" ></iconify-icon> Clear Conversation
+                     </li>
+                     <li>
+                            <iconify-icon icon="bi:gear-wide" class="icon"></iconify-icon> Settings
+                     </li>
+                     <li id="mode">
+                            <iconify-icon icon="bi:brightness-high" class="icon"></iconify-icon> Light Mode
+                     </li>
+                     <li>
+                            <iconify-icon icon="bi:globe" class="icon"></iconify-icon> English
+                     </li>
+                    </ul>
+                  </nav>
+              </aside>
+              <main>
+                     <div class="hints">
+                            <img src="logo.png" alt=""  class="logo">
+                            <p>Hey there , how can I help you ?  </p>
+                     </div>
+                     <div class="qna">
+                             <div class="result">
+                                  <div class="question">
+                                   <iconify-icon icon="bi:person-fill-gear" class="icon black"></iconify-icon>
+                                   <p>What is Web Development</p>
+                                  </div>
+                                  <div class="answer">
+                                   <iconify-icon icon="bi:robot" class="icon grey"></iconify-icon>
+                                   <p>Web development is the process of creating websites and web applications</p>
+                                  </div>
+                             </div>
+                     </div>
+                     <div class="request">
+                            <div class="input-group">
+                                   <iconify-icon icon="bi:person-fill-gear" class="icon black"></iconify-icon>
+                                   <input type ="text" placeholder="Provide a prompt..." autofocus>
+                                   <button id="send">Send</button>
+                            </div>
+                     </div>
+              </main>
+       </div>
+</body>
+</html>
